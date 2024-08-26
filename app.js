@@ -18,6 +18,11 @@ var app = express();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/usuario.route');
+var materialsRouter = require('./routes/material.route');
+var produtoRouter = require('./routes/produto.route');
+var cadastroRouter = require('./routes/cadastro.route');
+var movimentoRouter = require('./routes/movimento.route');
+var colheitaRouter = require('./routes/colheita.route');
 
 
 
@@ -33,6 +38,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/usuario', usersRouter);
+app.use('/material', materialsRouter);
+app.use('/produto',produtoRouter);
+app.use('/cadastro',cadastroRouter);
+app.use('/movimento',movimentoRouter);
+app.use('/colheita',colheitaRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
