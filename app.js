@@ -23,6 +23,7 @@ var produtoRouter = require('./routes/produto.route');
 var cadastroRouter = require('./routes/cadastro.route');
 var movimentoRouter = require('./routes/movimento.route');
 var colheitaRouter = require('./routes/colheita.route');
+var homeRouter = require('./routes/home.route');
 
 
 
@@ -43,6 +44,7 @@ app.use('/produto',produtoRouter);
 app.use('/cadastro',cadastroRouter);
 app.use('/movimento',movimentoRouter);
 app.use('/colheita',colheitaRouter);
+app.use('/home',homeRouter);
 
 
 // catch 404 and forward to error handler
